@@ -1,5 +1,32 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Auto-rotating photo carousel standing in for the product demo video
+(function carousel() {
+  const root = document.getElementById('demoCarousel');
+  if (!root) return;
+  const slides = root.querySelectorAll('.carousel-slide');
+  const dotsWrap = document.getElementById('carouselDots');
+  let index = 0;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    if (i === 0) dot.classList.add('active');
+    dot.setAttribute('aria-label', `Show photo ${i + 1}`);
+    dot.addEventListener('click', () => show(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function show(i) {
+    slides[index].classList.remove('active');
+    dotsWrap.children[index].classList.remove('active');
+    index = i;
+    slides[index].classList.add('active');
+    dotsWrap.children[index].classList.add('active');
+  }
+
+  setInterval(() => show((index + 1) % slides.length), 4000);
+})();
+
 // Bonus countdown timer — resets each day at midnight local time to keep urgency evergreen
 (function countdown() {
   const el = document.getElementById('countdown');
