@@ -113,6 +113,25 @@ img { max-width: 100%; display: block; }
 .logo-mark { font-size: 1.4rem; }
 .logo-text strong { color: var(--teal); }
 
+/* ---------- Urgency Bar ---------- */
+.urgency-bar {
+  background: var(--tan);
+  color: var(--charcoal);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.urgency-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 8px 24px;
+  text-align: center;
+}
+.urgency-timer strong,
+.urgency-inner strong { color: var(--charcoal); }
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -274,6 +293,99 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 
+/* ---------- Value Stack ---------- */
+.value-stack {
+  flex-grow: 1;
+  margin-bottom: 12px;
+  border-top: 1px dashed #ddd;
+  padding-top: 16px;
+}
+.value-stack li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: #333;
+  padding: 6px 0;
+  border-bottom: 1px dashed #eee;
+}
+.value-stack li span:first-child::before {
+  content: "✓ ";
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+.value-stack li span:last-child {
+  color: #999;
+  text-decoration: line-through;
+  white-space: nowrap;
+}
+.total-value {
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+.total-value span { color: var(--teal-dark); }
+
+/* ---------- Bonus Stack ---------- */
+.bonus-stack { background: var(--charcoal); color: var(--white); text-align: center; }
+.bonus-stack h2 { max-width: 640px; margin-left: auto; margin-right: auto; font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 44px;
+}
+.bonus-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+}
+.bonus-card .icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.bonus-card h3 { font-size: 1.05rem; }
+.bonus-card p { color: rgba(255,255,255,0.75); font-size: 0.92rem; }
+.bonus-value { color: var(--tan) !important; font-weight: 700; margin: 0 !important; }
+.bonus-note { margin-top: 32px; font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+
+/* ---------- Guarantee ---------- */
+.guarantee { background: var(--cream); text-align: center; }
+.guarantee-inner { max-width: 680px; }
+.guarantee-badge { font-size: 3rem; display: block; margin-bottom: 12px; }
+.guarantee h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+.guarantee p { color: #444; font-size: 1.05rem; }
+
+/* ---------- FAQ ---------- */
+.faq { background: var(--white); }
+.faq-wrap { max-width: 720px; }
+.faq h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin-bottom: 40px; }
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 8px 20px;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 14px 0;
+  list-style: none;
+  position: relative;
+  padding-right: 24px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 12px;
+  font-size: 1.3rem;
+  color: var(--teal-dark);
+}
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p { color: #555; font-size: 0.95rem; padding-bottom: 16px; margin: 0; }
+
 /* ---------- Testimonials ---------- */
 .testimonials h2 { max-width: 640px; margin-left: auto; margin-right: auto; font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
 .testimonial-grid {
@@ -338,7 +450,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .problem-grid, .pricing-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .problem-grid, .pricing-grid, .testimonial-grid, .bonus-grid { grid-template-columns: 1fr; }
   .video-wrap { grid-template-columns: 1fr; }
   .price-card.featured { transform: none; order: -1; }
 }
