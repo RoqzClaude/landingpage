@@ -128,6 +128,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 .k1-logo { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 1.2rem; color: var(--k1-white); }
 .k1-logo-mark { font-size: 1.35rem; }
 .k1-logo-text strong { color: var(--k1-teal); }
+.k1-logo img {
+  height: 44px;
+  width: auto;
+  background: var(--k1-white);
+  border-radius: 8px;
+  padding: 3px 8px;
+}
 .k1-nav { display: flex; align-items: center; gap: 28px; }
 .k1-nav-links { display: flex; gap: 22px; }
 .k1-nav-links a { color: rgba(255,255,255,0.8); font-size: 0.92rem; font-weight: 600; }

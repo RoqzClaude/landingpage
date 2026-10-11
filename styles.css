@@ -112,6 +112,7 @@ img { max-width: 100%; display: block; }
 }
 .logo-mark { font-size: 1.4rem; }
 .logo-text strong { color: var(--teal); }
+.logo img { height: 42px; width: auto; background: var(--white); border-radius: 8px; padding: 3px 8px; }
 
 /* ---------- Urgency Bar ---------- */
 .urgency-bar {
