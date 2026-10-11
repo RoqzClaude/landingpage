@@ -116,6 +116,14 @@ img { max-width: 100%; display: block; }
 .slideshow-dots button { width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0; background: rgba(255,255,255,0.4); cursor: pointer; }
 .slideshow-dots button.active { background: var(--gold); }
 
+.gear-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+.gear-item {
+  margin: 0; background: var(--white); border-radius: var(--radius);
+  overflow: hidden; text-align: center; box-shadow: var(--shadow);
+}
+.gear-item img { width: 100%; height: 160px; object-fit: contain; background: var(--white); padding: 14px; }
+.gear-item figcaption { font-size: 0.88rem; font-weight: 700; color: var(--charcoal); padding: 0 10px 14px; }
+
 /* ---------- Problem / agitate ---------- */
 .problem { text-align: center; }
 .problem h2 { max-width: 680px; margin-left: auto; margin-right: auto; font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
@@ -208,6 +216,9 @@ img { max-width: 100%; display: block; }
   .problem-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
   .gallery-item.span-2 { grid-column: span 2; }
+  .gear-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .gear-item img { height: 110px; padding: 8px; }
+  .gear-item figcaption { font-size: 0.78rem; padding: 0 6px 10px; }
   .sticky-cta { display: block; }
   body { padding-bottom: 64px; }
 }
