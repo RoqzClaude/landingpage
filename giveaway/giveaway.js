@@ -21,25 +21,43 @@ document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new 
   setInterval(tick, 1000);
 })();
 
-/* VSL: click-to-play swaps the photo stand-in for the real embedded video. */
-(function vsl() {
-  const playBtn = document.getElementById('vslPlay');
-  const frame = document.getElementById('vslFrame');
-  if (!playBtn || !frame) return;
-  playBtn.addEventListener('click', () => {
-    // [NEEDS K1 CONFIRMATION] — replace with the real hosted VSL embed URL.
-    frame.innerHTML = `<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="K1 Outdoors — A Year of Glamping" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>`;
+/* Slideshow: arrows, dots, and autoplay through the gear photos. */
+(function slideshow() {
+  const frame = document.getElementById('slideshowFrame');
+  const dotsWrap = document.getElementById('slideshowDots');
+  const prevBtn = document.getElementById('slidePrev');
+  const nextBtn = document.getElementById('slideNext');
+  if (!frame || !dotsWrap) return;
+
+  const slides = frame.querySelectorAll('.slideshow-slide');
+  let index = 0;
+  let timer;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    if (i === 0) dot.classList.add('active');
+    dot.setAttribute('aria-label', `Show photo ${i + 1}`);
+    dot.addEventListener('click', () => { show(i); restart(); });
+    dotsWrap.appendChild(dot);
   });
 
-  // Rotate the photo stand-in slides until the visitor presses play.
-  const slides = frame.querySelectorAll('.vsl-slide');
-  let i = 0;
-  setInterval(() => {
-    if (!frame.querySelector('.vsl-slide')) return; // video has replaced the slides
-    slides[i].classList.remove('active');
-    i = (i + 1) % slides.length;
-    slides[i].classList.add('active');
-  }, 3500);
+  function show(i) {
+    slides[index].classList.remove('active');
+    dotsWrap.children[index].classList.remove('active');
+    index = (i + slides.length) % slides.length;
+    slides[index].classList.add('active');
+    dotsWrap.children[index].classList.add('active');
+  }
+
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(() => show(index + 1), 4500);
+  }
+
+  prevBtn?.addEventListener('click', () => { show(index - 1); restart(); });
+  nextBtn?.addEventListener('click', () => { show(index + 1); restart(); });
+
+  restart();
 })();
 
 /* Entry form — client-side only until a real endpoint is wired up (see ARCHITECTURE.md pattern). */
