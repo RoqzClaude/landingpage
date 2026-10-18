@@ -224,6 +224,34 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-weight: 700;
 }
 
+/* ---------- Based in Edmonton ---------- */
+.k1-local-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.k1-local-art {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lifted);
+  border: 1px solid var(--k1-border);
+}
+.k1-local-art img { width: 100%; height: auto; display: block; }
+.k1-map-frame {
+  margin-top: 22px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--k1-border);
+  position: relative;
+  width: 100%;
+  padding-top: 56%;
+}
+.k1-map-frame iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+}
+
 /* ---------- Gallery ---------- */
 .k1-gallery { background: var(--k1-charcoal-soft); color: var(--k1-white); }
 .k1-gallery p { color: rgba(255,255,255,0.72); }
@@ -367,6 +395,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .k1-steps { grid-template-columns: repeat(2, 1fr); }
   .k1-two-col { grid-template-columns: 1fr; gap: 32px; }
   .k1-included { grid-template-columns: 1fr; }
+  .k1-local-grid { grid-template-columns: 1fr; gap: 28px; }
   .k1-gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
   .k1-gallery-item.span-2 { grid-column: span 2; }
   .k1-nav-links { display: none; }
