@@ -147,6 +147,18 @@ img { max-width: 100%; display: block; }
 .trustpilot-wordmark { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--charcoal); margin: 0; letter-spacing: -0.02em; }
 .trustpilot h2 { font-size: clamp(1.6rem, 3.4vw, 2.1rem); }
 
+/* ---------- Based in Edmonton ---------- */
+.local { background: var(--white); }
+.local-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+.local-art { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.local-art img { width: 100%; height: auto; display: block; }
+.local-copy h2 { font-size: clamp(1.5rem, 3.2vw, 2rem); }
+.map-frame {
+  margin-top: 22px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+  position: relative; width: 100%; padding-top: 56%;
+}
+.map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
 /* ---------- Entry form ---------- */
 .entry-section { background: linear-gradient(160deg, #17332f 0%, #1c1c1e 100%); color: var(--white); text-align: center; }
 .entry-section h2 { font-size: clamp(1.8rem, 3.8vw, 2.5rem); }
@@ -214,6 +226,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .problem-grid { grid-template-columns: 1fr; }
+  .local-grid { grid-template-columns: 1fr; gap: 28px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
   .gallery-item.span-2 { grid-column: span 2; }
   .gear-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
