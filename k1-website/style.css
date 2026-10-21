@@ -216,6 +216,8 @@ button { font-family: inherit; }
   border: 1px solid var(--border); position: relative; width: 100%; padding-top: 56%;
 }
 .map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.map-frame-static { padding-top: 0; }
+.map-frame-static img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); }
 
 /* ---------- FAQ ---------- */
 .faq-list { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
