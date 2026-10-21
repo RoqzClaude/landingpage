@@ -140,7 +140,7 @@ button { font-family: inherit; }
 .page-hero p { color: rgba(255,255,255,0.82); max-width: 560px; }
 
 /* ---------- Credibility strip ---------- */
-.credibility { background: var(--charcoal); padding: 28px 0; }
+.credibility { background: var(--charcoal); padding: 28px 0; position: relative; }
 .credibility-row {
   display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; text-align: center;
 }
@@ -232,10 +232,13 @@ button { font-family: inherit; }
 .section-blend {
   height: 72px; margin: -36px 0; position: relative; pointer-events: none;
 }
-.blend-cream-dark  { background: linear-gradient(180deg, var(--cream) 0%, var(--charcoal) 100%); }
-.blend-dark-cream  { background: linear-gradient(180deg, var(--charcoal) 0%, var(--cream) 100%); }
 .blend-cream-white { background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%); }
 .blend-white-cream { background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%); }
+
+/* Wave dividers: used where the color jump is too high-contrast for a flat gradient (e.g. into/out of dark sections) */
+.wave-divider { position: absolute; left: 0; right: 0; width: 100%; height: 60px; display: block; pointer-events: none; fill: var(--charcoal); }
+.wave-divider-top { bottom: 100%; }
+.wave-divider-bottom { top: 100%; fill: var(--cream); }
 
 /* ---------- Partners marquee ---------- */
 .partners-track-wrap {
@@ -313,13 +316,17 @@ button { font-family: inherit; }
 /* ---------- Final CTA band ---------- */
 .final-cta {
   background: linear-gradient(160deg, var(--charcoal) 0%, #17332f 100%);
-  color: var(--white); text-align: center;
+  color: var(--white); text-align: center; position: relative;
 }
 .final-cta h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
 .final-cta p { color: rgba(255,255,255,0.8); max-width: 480px; margin: 0 auto 28px; }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--charcoal); color: rgba(255,255,255,0.68); padding: 48px 0 28px; }
+.site-footer { background: var(--charcoal); color: rgba(255,255,255,0.68); padding: 48px 0 28px; position: relative; }
+.footer-treeline {
+  position: absolute; left: 0; right: 0; bottom: 100%;
+  width: 100%; height: 90px; display: block; fill: var(--charcoal); pointer-events: none;
+}
 .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; margin-bottom: 28px; }
 .footer-brand { max-width: 320px; }
 .footer-brand img { height: 42px; margin-bottom: 10px; background: var(--white); border-radius: 8px; padding: 3px 8px; }
