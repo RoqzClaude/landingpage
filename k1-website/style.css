@@ -228,6 +228,15 @@ button { font-family: inherit; }
 .map-frame-static { padding-top: 0; }
 .map-frame-static img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); }
 
+/* ---------- Section blends (soft transitions instead of hard edges) ---------- */
+.section-blend {
+  height: 72px; margin: -36px 0; position: relative; pointer-events: none;
+}
+.blend-cream-dark  { background: linear-gradient(180deg, var(--cream) 0%, var(--charcoal) 100%); }
+.blend-dark-cream  { background: linear-gradient(180deg, var(--charcoal) 0%, var(--cream) 100%); }
+.blend-cream-white { background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%); }
+.blend-white-cream { background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%); }
+
 /* ---------- Partners marquee ---------- */
 .partners-track-wrap {
   margin-top: 28px; overflow: hidden;
