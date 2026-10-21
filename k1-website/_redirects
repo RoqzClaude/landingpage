@@ -8,8 +8,8 @@
 
 /pages/industries      /services.html   301
 /pages/case-studies     /gallery.html    301
-/pages/contact           /about.html      301
+/pages/contact           /contact.html    301
 /collections/*            /services.html   301
 /products/*                /services.html   301
-/pages/book               /book.html       301
-/pages/booking            /book.html       301
+/pages/book               /contact.html    301
+/pages/booking            /contact.html    301
