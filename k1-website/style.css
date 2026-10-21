@@ -150,6 +150,8 @@ button { font-family: inherit; }
 }
 .credibility-item p { margin: 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
 .credibility-item strong { color: var(--white); }
+.credibility-link { display: block; text-align: center; transition: opacity 0.15s ease; }
+.credibility-link:hover { opacity: 0.8; }
 .credibility-stars { color: #00b67a; font-size: 1.3rem; letter-spacing: 2px; margin-bottom: 2px; }
 .credibility-stat { font-family: var(--font-display); font-size: 1.8rem; color: var(--tan); margin-bottom: 0 !important; line-height: 1; }
 .credibility-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
