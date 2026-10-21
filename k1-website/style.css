@@ -219,6 +219,24 @@ button { font-family: inherit; }
   background: none; border: none; cursor: pointer; line-height: 1;
 }
 
+/* ---------- Gallery viewer (featured photo + thumbnail strip) ---------- */
+.gallery-main {
+  border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lifted);
+}
+.gallery-main img { width: 100%; height: 520px; object-fit: cover; display: block; }
+.gallery-main-caption { text-align: center; margin: 14px 0 0; font-weight: 600; color: var(--ink); }
+.gallery-thumbs {
+  display: flex; gap: 12px; margin-top: 20px; overflow-x: auto; padding-bottom: 6px;
+}
+.gallery-thumb {
+  flex: 0 0 auto; width: 92px; height: 68px; padding: 0; border-radius: var(--radius-sm);
+  overflow: hidden; border: 2px solid transparent; cursor: pointer; background: none; opacity: 0.65;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+.gallery-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-thumb:hover { opacity: 0.9; }
+.gallery-thumb.active { opacity: 1; border-color: var(--teal-dark); }
+
 /* ---------- Map ---------- */
 .map-frame {
   border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-card);
@@ -388,5 +406,6 @@ button { font-family: inherit; }
   .card-grid { grid-template-columns: 1fr; }
   .included-list { grid-template-columns: 1fr; }
   .photo-grid { grid-template-columns: 1fr; }
+  .gallery-main img { height: 300px; }
   .footer-bottom { flex-direction: column; }
 }

@@ -57,3 +57,19 @@ if (lightbox) {
     if (e.key === 'Escape') lightbox.classList.remove('open');
   });
 }
+
+// Gallery viewer (featured photo + thumbnail strip)
+const galleryMainImg = document.getElementById('galleryMainImg');
+const galleryMainCaption = document.getElementById('galleryMainCaption');
+const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+galleryThumbs.forEach((thumb) => {
+  thumb.addEventListener('click', () => {
+    galleryThumbs.forEach((t) => t.classList.remove('active'));
+    thumb.classList.add('active');
+    if (!galleryMainImg) return;
+    galleryMainImg.src = thumb.getAttribute('data-src');
+    galleryMainImg.alt = thumb.getAttribute('data-alt') || '';
+    galleryMainImg.style.objectPosition = thumb.getAttribute('data-position') || 'center';
+    if (galleryMainCaption) galleryMainCaption.textContent = thumb.getAttribute('data-caption') || '';
+  });
+});
