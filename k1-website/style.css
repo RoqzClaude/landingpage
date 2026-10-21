@@ -120,7 +120,7 @@ button { font-family: inherit; }
 .hero-sub { font-size: 1.15rem; color: var(--ink); max-width: 580px; margin-left: auto; margin-right: auto; }
 .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; justify-content: center; }
 .hero-photo-banner { line-height: 0; }
-.hero-photo-banner img { width: 100%; max-height: 440px; object-fit: cover; object-position: center 42%; display: block; }
+.hero-photo-banner img { width: 100%; max-height: 440px; object-fit: cover; object-position: center 65%; display: block; }
 
 /* Page hero (non-homepage): shorter, simpler */
 .page-hero {
