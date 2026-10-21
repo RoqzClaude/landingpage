@@ -49,6 +49,12 @@ button { font-family: inherit; }
 
 .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
 .section { padding: 80px 0; }
+.section-texture {
+  background-color: var(--white);
+  background-image:
+    radial-gradient(circle, rgba(63,130,123,0.07) 1.4px, transparent 1.4px);
+  background-size: 22px 22px;
+}
 .section--tight { padding: 52px 0; }
 .center { text-align: center; }
 .eyebrow {
@@ -109,7 +115,7 @@ button { font-family: inherit; }
 .hero {
   position: relative; color: var(--white); overflow: hidden; padding: 90px 0 76px;
 }
-.hero-photo { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: -2; }
+.hero-photo { position: absolute; inset: 0; background-size: 250% auto; background-position: 15% 60%; z-index: -2; }
 .hero-scrim {
   position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(180deg, rgba(15,20,20,0.72) 0%, rgba(18,18,20,0.58) 55%, rgba(16,40,37,0.82) 100%);
