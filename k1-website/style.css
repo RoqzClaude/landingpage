@@ -342,9 +342,6 @@ button { font-family: inherit; }
 .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 20px; }
 .why-list li { position: relative; padding-left: 30px; margin-bottom: 18px; font-weight: 600; font-size: 1.02rem; }
 .why-list li::before { content: "✓"; position: absolute; left: 0; color: var(--teal-dark); font-weight: 700; }
-.jaspa-art { display: flex; justify-content: center; }
-.jaspa-art img { max-width: 320px; }
-
 /* ---------- About page ---------- */
 .founder-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: center; }
 .founder-photo {
