@@ -91,6 +91,10 @@ button { font-family: inherit; }
 .btn-book-sm { padding: 9px 20px; font-size: 0.9rem; }
 .btn-book-lg { padding: 18px 40px; font-size: 1.1rem; }
 .text-link { color: var(--teal-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.btn-outline {
+  background: transparent; color: var(--teal-dark); border-color: var(--teal-dark);
+}
+.btn-outline:hover { background: var(--teal-dark); color: var(--white); }
 
 /* ---------- Header ---------- */
 .site-header {
