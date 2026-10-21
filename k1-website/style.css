@@ -239,7 +239,6 @@ button { font-family: inherit; }
 .wave-divider { position: absolute; left: 0; right: 0; width: 100%; height: 60px; display: block; pointer-events: none; fill: var(--charcoal); }
 .wave-divider-top { bottom: 100%; }
 .wave-divider-bottom { top: 100%; fill: var(--cream); }
-.credibility .wave-divider-bottom { fill: var(--charcoal); }
 .credibility-google { display: flex; align-items: center; gap: 6px; justify-content: center; margin-bottom: 2px; }
 
 /* ---------- Partners marquee ---------- */
@@ -317,7 +316,7 @@ button { font-family: inherit; }
 
 /* ---------- Final CTA band ---------- */
 .final-cta {
-  background: linear-gradient(160deg, #1d4a42 0%, #17332f 100%);
+  background: #1a433c;
   color: var(--white); text-align: center; position: relative;
 }
 .final-cta h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
