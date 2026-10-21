@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us | K1 Outdoors</title>
+<meta name="description" content="Get in touch with K1 Outdoors — email, call, or stop by our NW Edmonton location.">
+<link rel="canonical" href="https://k1outdoors.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo"><img src="assets/k1-logo-wide.jpg" alt="K1 Outdoors"></a>
+    <nav class="main-nav">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a href="tent.html">The Tent</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </div>
+      <div class="header-actions">
+        <a href="book.html" class="btn btn-book btn-book-sm">Book Now</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Get In Touch</h1>
+    <p>Questions about a rental, an event, or anything else — we'd love to hear from you.</p>
+  </div>
+</section>
+
+<!-- CONTACT INFO + FORM -->
+<section class="section" style="background: var(--white);">
+  <div class="wrap hero-grid" style="align-items: start;">
+    <div>
+      <p class="eyebrow">Contact details</p>
+      <h2>Reach Us Directly</h2>
+      <ul class="contact-list">
+        <li><a href="mailto:james@k1outdoors.com" class="text-link">james@k1outdoors.com</a></li>
+        <li><a href="tel:+17806952894" class="text-link">780-695-2894</a></li>
+        <li>12331 St Albert Trail NW, Edmonton, AB</li>
+      </ul>
+      <div class="map-frame map-frame-static" style="max-width: 460px; margin: 28px 0 0;">
+        <img src="assets/map-pickup-location.jpg" alt="Map of K1 Outdoors location in NW Edmonton, Alberta">
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">Send a message</p>
+      <h2>We'll Get Back To You</h2>
+      <form action="mailto:james@k1outdoors.com" method="post" enctype="text/plain" class="contact-form">
+        <label for="contactName">Name</label>
+        <input type="text" id="contactName" name="Name" required>
+        <label for="contactEmail">Email</label>
+        <input type="email" id="contactEmail" name="Email" required>
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-book" style="margin-top: 8px;">Send Message</button>
+      </form>
+      <p style="font-size: 0.82rem; margin-top: 10px;">
+        <span class="k1-flag">NEEDS K1 CONFIRMATION</span> this form opens the visitor's email app to send — swap for a form backend (e.g. Formspree) if you'd rather it submit directly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="section final-cta">
+  <div class="wrap">
+    <h2>Ready To Book?</h2>
+    <p>Pick your dates and let us handle the rest.</p>
+    <a href="book.html" class="btn btn-book btn-book-lg">Book Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/k1-logo-wide.jpg" alt="K1 Outdoors">
+        <p>Camping Made Easy</p>
+        <p>12331 St Albert Trail NW, Edmonton, AB</p>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:james@k1outdoors.com">james@k1outdoors.com</a>
+        <a href="tel:+17806952894">780-695-2894</a>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram" title="NEEDS CONFIRMATION — Instagram URL">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" title="NEEDS CONFIRMATION — Facebook URL">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.76 0-5 2.24-5 5v2H7v4h2v8h4v-8h3l1-4h-4v-2c0-.55.45-1 1-1z"/></svg>
+          </a>
+        </div>
+        <a href="book.html" class="btn btn-book btn-book-sm" style="margin-top:10px; align-self:flex-start;">Book Now</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> K1 Outdoors. All rights reserved.</span>
+      <span>Edmonton, Alberta</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-book"><a href="book.html" class="btn btn-book">Book Now</a></div>
+
+<script src="script.js"></script>
+</body>
+</html>
