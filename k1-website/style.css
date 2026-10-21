@@ -69,6 +69,11 @@ button { font-family: inherit; }
   border: 1px dashed #d8b64b; border-radius: 6px; padding: 1px 8px;
   font-size: 0.76rem; font-weight: 600;
 }
+.why-photo {
+  background: #fff3cd; border: 1px dashed #d8b64b; border-radius: var(--radius-lg);
+  min-height: 320px; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 24px;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
