@@ -444,6 +444,24 @@ button { font-family: inherit; }
 .contact-list { list-style: none; margin: 18px 0 0; padding: 0; }
 .contact-list li { margin-bottom: 14px; font-size: 1.02rem; }
 
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.contact-form { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
+.contact-field { display: flex; flex-direction: column; gap: 6px; }
+.contact-field label { font-weight: 700; font-size: 0.92rem; }
+.contact-field input,
+.contact-field textarea {
+  font-family: var(--font-body); font-size: 1rem; padding: 12px 14px;
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--cream); color: var(--ink); resize: vertical;
+}
+.contact-field input:focus,
+.contact-field textarea:focus { outline: 2px solid var(--teal); outline-offset: 1px; }
+.contact-field-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form-note { margin-top: 18px; font-weight: 700; color: var(--teal-dark); }
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
 /* ---------- Tent spec page ---------- */
 .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
 .spec-card {
