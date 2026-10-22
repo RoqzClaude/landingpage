@@ -60,7 +60,7 @@
       <p class="eyebrow">Send a message</p>
       <h2>We'll Get Back To You By Email</h2>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="contactForm">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="contact-form">
         <input type="hidden" name="form-name" value="contact">
         <p class="contact-field-hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
 
@@ -82,7 +82,6 @@
         </div>
 
         <button type="submit" class="btn btn-book btn-book-lg">Send Message</button>
-        <p class="contact-form-note" id="contactFormNote" hidden>Thanks — your message is on its way. We'll be in touch shortly.</p>
       </form>
     </div>
   </div>
@@ -130,31 +129,5 @@
 <div class="sticky-book"><a href="tel:+17806952894" class="btn btn-book">Call Now</a></div>
 
 <script src="script.js"></script>
-<script>
-  (function () {
-    var form = document.getElementById('contactForm');
-    if (!form) return;
-    function encode(data) {
-      return Object.keys(data).map(function (key) {
-        return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
-      }).join('&');
-    }
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var data = {};
-      new FormData(form).forEach(function (value, key) { data[key] = value; });
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode(data)
-      }).then(function () {
-        form.hidden = true;
-        document.getElementById('contactFormNote').hidden = false;
-      }).catch(function () {
-        alert("Something went wrong sending that — please call or email us directly.");
-      });
-    });
-  })();
-</script>
 </body>
 </html>
