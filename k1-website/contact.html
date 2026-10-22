@@ -58,18 +58,18 @@
 
     <div>
       <p class="eyebrow">Send a message</p>
-      <h2>We'll Get Back To You By Email</h2>
+      <h2>Check Availability</h2>
 
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="contact-form">
         <input type="hidden" name="form-name" value="contact">
         <p class="contact-field-hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
 
         <div class="contact-field">
-          <label for="cf-name">Name</label>
+          <label for="cf-name">Name <span class="req">(required)</span></label>
           <input type="text" id="cf-name" name="name" required>
         </div>
         <div class="contact-field">
-          <label for="cf-email">Email</label>
+          <label for="cf-email">Email <span class="req">(required)</span></label>
           <input type="email" id="cf-email" name="email" required>
         </div>
         <div class="contact-field">
@@ -77,11 +77,43 @@
           <input type="tel" id="cf-phone" name="phone">
         </div>
         <div class="contact-field">
-          <label for="cf-message">Tell us about your camping trip (dates, anything else)</label>
-          <textarea id="cf-message" name="message" rows="5" required></textarea>
+          <label for="cf-trip-type">What are you planning? <span class="req">(required)</span></label>
+          <select id="cf-trip-type" name="trip_type" required>
+            <option value="" disabled selected>Choose one</option>
+            <option value="Family camping">Family camping</option>
+            <option value="Event">Event</option>
+            <option value="Wedding or venue">Wedding or venue</option>
+            <option value="Group or team">Group or team</option>
+          </select>
         </div>
+        <div class="contact-field-row">
+          <div class="contact-field">
+            <label for="cf-dates">Dates <span class="req">(required)</span></label>
+            <input type="text" id="cf-dates" name="dates" placeholder="e.g. July 4th long weekend, or not sure yet" required>
+          </div>
+          <div class="contact-field">
+            <label for="cf-group-size">Group size <span class="req">(required)</span></label>
+            <input type="number" id="cf-group-size" name="group_size" min="1" required>
+          </div>
+        </div>
+        <div class="contact-field">
+          <label for="cf-location">Where you're camping <span class="req">(required)</span></label>
+          <input type="text" id="cf-location" name="location" placeholder="Campground or city" required>
+        </div>
+        <div class="contact-field">
+          <label for="cf-message">Anything else? (optional)</label>
+          <textarea id="cf-message" name="message" rows="4" placeholder="Example: July 4th long weekend, 8 people, camping at Pigeon Lake."></textarea>
+        </div>
+        <label class="contact-checkbox">
+          <input type="checkbox" name="consent" value="yes" required>
+          OK to email or text me about K1 rentals. <span class="req">(required)</span>
+        </label>
 
-        <button type="submit" class="btn btn-book btn-book-lg">Send Message</button>
+        <button type="submit" class="btn btn-book btn-book-lg">Check Availability</button>
+        <p class="contact-form-note">
+          We reply within <span class="k1-flag">NEEDS K1 CONFIRMATION — typical reply time</span>. Need it sooner? Call or text 780-695-2894.
+        </p>
+        <p class="contact-form-note">No spam. Your details are only used to reply to you.</p>
       </form>
     </div>
   </div>

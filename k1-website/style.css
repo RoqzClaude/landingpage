@@ -454,17 +454,31 @@ button { font-family: inherit; }
 .contact-field { display: flex; flex-direction: column; gap: 6px; }
 .contact-field label { font-weight: 700; font-size: 0.92rem; }
 .contact-field input,
-.contact-field textarea {
+.contact-field textarea,
+.contact-field select {
   font-family: var(--font-body); font-size: 1rem; padding: 12px 14px;
   border: 1px solid var(--border); border-radius: var(--radius-sm);
   background: var(--cream); color: var(--ink); resize: vertical;
 }
 .contact-field input:focus,
-.contact-field textarea:focus { outline: 2px solid var(--teal); outline-offset: 1px; }
+.contact-field textarea:focus,
+.contact-field select:focus { outline: 2px solid var(--teal); outline-offset: 1px; }
+.contact-field .req { font-weight: 400; color: var(--muted); font-size: 0.82rem; }
 .contact-field-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.contact-form-note { margin-top: 18px; font-weight: 700; color: var(--teal-dark); }
+.contact-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.contact-checkbox {
+  display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem;
+  cursor: pointer;
+}
+.contact-checkbox input { margin-top: 3px; }
+.contact-checkbox .req { color: var(--muted); font-size: 0.82rem; }
+.contact-form-note { margin-top: 0; font-size: 0.9rem; color: var(--muted); }
+.contact-form-note:first-of-type { margin-top: 4px; }
 @media (max-width: 860px) {
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 520px) {
+  .contact-field-row { grid-template-columns: 1fr; }
 }
 
 /* ---------- Tent spec page ---------- */
