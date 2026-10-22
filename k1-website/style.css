@@ -74,6 +74,10 @@ button { font-family: inherit; }
   height: 460px;
 }
 .why-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.media-placeholder {
+  background: var(--charcoal-soft); display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.7); text-align: center; padding: 24px; font-size: 0.9rem;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
