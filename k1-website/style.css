@@ -176,17 +176,17 @@ button { font-family: inherit; }
 }
 
 /* ---------- Credibility strip ---------- */
-.credibility { background: var(--charcoal); padding: 28px 0; position: relative; }
+.credibility { background: var(--charcoal); padding: 36px 0; position: relative; }
 .credibility-row {
   display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; text-align: center;
 }
-.credibility-item p { margin: 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+.credibility-item p { margin: 0; color: rgba(255,255,255,0.95); font-size: 1.05rem; font-weight: 500; }
 .credibility-item strong { color: var(--white); }
 .credibility-link { display: block; text-align: center; transition: opacity 0.15s ease; }
 .credibility-link:hover { opacity: 0.8; }
-.credibility-stars { color: #00b67a; font-size: 1.3rem; letter-spacing: 2px; margin-bottom: 2px; }
-.credibility-stat { font-family: var(--font-display); font-size: 1.8rem; color: var(--tan); margin-bottom: 0 !important; line-height: 1; }
-.credibility-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+.credibility-stars { color: #00d690; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 4px; }
+.credibility-stat { font-family: var(--font-display); font-size: 2rem; color: var(--tan); margin-bottom: 0 !important; line-height: 1; }
+.credibility-divider { width: 1px; height: 44px; background: rgba(255,255,255,0.25); }
 @media (max-width: 560px) {
   .credibility-divider { display: none; }
 }
