@@ -1,0 +1,15 @@
+# K1 Outdoors — Netlify redirects from the old Shopify site.
+# [NEEDS K1 CONFIRMATION] — this is a template based on common Shopify URL
+# patterns and the plan's stated page consolidation (Industries, Case
+# Studies, and Contact folded into Services, Gallery, and the footer).
+# Replace/extend with the ACTUAL old URLs before launch — check Shopify
+# admin > Online Store > Navigation, and Google Search Console, for the
+# real list of indexed paths so nothing 404s.
+
+/pages/industries      /services.html   301
+/pages/case-studies     /gallery.html    301
+/pages/contact           /contact.html    301
+/collections/*            /services.html   301
+/products/*                /services.html   301
+/pages/book               /contact.html    301
+/pages/booking            /contact.html    301
