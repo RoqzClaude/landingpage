@@ -11,5 +11,5 @@
 /pages/contact           /contact.html    301
 /collections/*            /services.html   301
 /products/*                /services.html   301
-/pages/book               https://k-1-outdoors.checkfront.com/reserve/    301
-/pages/booking            https://k-1-outdoors.checkfront.com/reserve/    301
+/pages/book               /book.html    301
+/pages/booking            /book.html    301
