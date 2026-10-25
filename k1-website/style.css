@@ -192,14 +192,25 @@ button { font-family: inherit; }
 }
 
 /* ---------- Steps (How it works) ---------- */
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 44px; }
-.step { text-align: center; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; position: relative; }
+.steps::before {
+  content: ""; position: absolute; top: 32px; left: 16.5%; right: 16.5%; height: 2px;
+  background: repeating-linear-gradient(90deg, var(--teal) 0 10px, transparent 10px 20px);
+  z-index: 0;
+}
+.step { text-align: center; position: relative; }
 .step-icon {
   width: 64px; height: 64px; border-radius: 50%; background: var(--teal); color: var(--white);
   display: flex; align-items: center; justify-content: center; font-size: 1.6rem;
-  margin: 0 auto 16px;
+  margin: 0 auto 16px; position: relative; z-index: 1; box-shadow: 0 0 0 6px var(--cream);
 }
-.step h3 { font-size: 1.1rem; }
+.step-num {
+  position: absolute; bottom: -4px; right: -4px; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--tan); color: var(--charcoal); font-size: 0.72rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px var(--cream);
+}
+.step h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.step p { font-size: 0.92rem; }
 
 /* ---------- Industries ---------- */
 .industry-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 44px; }
