@@ -104,13 +104,11 @@ button { font-family: inherit; }
 /* ---------- Promo caution-tape banner ---------- */
 .caution-banner {
   display: block; position: relative; z-index: 90; overflow: hidden;
-  background: repeating-linear-gradient(
-    -45deg, #f4c800, #f4c800 28px, #1c1c1e 28px, #1c1c1e 56px
-  );
+  background: var(--teal-dark);
   padding: 10px 16px; text-align: center; text-decoration: none;
 }
 .caution-banner span {
-  display: inline-block; background: var(--charcoal); color: #f4c800;
+  display: inline-block; background: var(--charcoal); color: var(--tan);
   font-family: var(--font-display); font-weight: 600; letter-spacing: 0.02em;
   font-size: 0.95rem; padding: 6px 18px; border-radius: 999px;
 }
