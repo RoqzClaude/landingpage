@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F87598NVN3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F87598NVN3');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z3weduc9js");
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us | K1 Outdoors</title>
+<meta name="description" content="Get in touch with K1 Outdoors — email, call, or stop by our NW Edmonton location.">
+<link rel="canonical" href="https://k1outdoors.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo"><img src="assets/k1-logo-wide.jpg" alt="K1 Outdoors"></a>
+    <nav class="main-nav">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a href="tent.html">The Tent</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </div>
+      <div class="header-actions">
+        <a href="book.html" class="btn btn-book btn-book-sm">Check 2027 Dates</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Get In Touch</h1>
+    <p>Questions about a rental, an event, or anything else — we'd love to hear from you.</p>
+  </div>
+</section>
+
+<!-- CONTACT INFO + FORM -->
+<section class="section" style="background: var(--white);">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Contact details</p>
+      <h2>Call, Email, Or Send A Message</h2>
+      <p style="margin-top: 24px;"><a href="book.html" class="btn btn-book btn-book-lg">Book Now</a></p>
+      <p style="margin-top: 16px;"><a href="mailto:james@k1outdoors.com" class="text-link">james@k1outdoors.com</a></p>
+      <p style="margin-top: 10px; color: var(--muted);">12331 St Albert Trail NW, Edmonton, AB</p>
+      <div class="map-frame map-frame-static" style="max-width: 460px; margin: 32px 0 0;">
+        <img src="assets/map-pickup-location.jpg" alt="Map of K1 Outdoors location in NW Edmonton, Alberta">
+      </div>
+    </div>
+
+    <div>
+      <p class="eyebrow">Send a message</p>
+      <h2>Check Availability</h2>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="contact-field-hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+
+        <div class="contact-field">
+          <label for="cf-name">Name <span class="req">(required)</span></label>
+          <input type="text" id="cf-name" name="name" required>
+        </div>
+        <div class="contact-field">
+          <label for="cf-email">Email <span class="req">(required)</span></label>
+          <input type="email" id="cf-email" name="email" required>
+        </div>
+        <div class="contact-field">
+          <label for="cf-phone">Phone (optional)</label>
+          <input type="tel" id="cf-phone" name="phone">
+        </div>
+        <div class="contact-field">
+          <label for="cf-trip-type">What are you planning? <span class="req">(required)</span></label>
+          <select id="cf-trip-type" name="trip_type" required>
+            <option value="" disabled selected>Choose one</option>
+            <option value="Family camping">Family camping</option>
+            <option value="Event">Event</option>
+            <option value="Wedding or venue">Wedding or venue</option>
+            <option value="Group or team">Group or team</option>
+          </select>
+        </div>
+        <div class="contact-field-row">
+          <div class="contact-field">
+            <label for="cf-dates">Dates <span class="req">(required)</span></label>
+            <input type="text" id="cf-dates" name="dates" placeholder="e.g. July 4th long weekend, or not sure yet" required>
+          </div>
+          <div class="contact-field">
+            <label for="cf-group-size">Group size <span class="req">(required)</span></label>
+            <input type="number" id="cf-group-size" name="group_size" min="1" required>
+          </div>
+        </div>
+        <div class="contact-field">
+          <label for="cf-location">Where you're camping <span class="req">(required)</span></label>
+          <input type="text" id="cf-location" name="location" placeholder="Campground or city" required>
+        </div>
+        <div class="contact-field">
+          <label for="cf-message">Anything else? (optional)</label>
+          <textarea id="cf-message" name="message" rows="4" placeholder="Example: July 4th long weekend, 8 people, camping at Pigeon Lake."></textarea>
+        </div>
+        <label class="contact-checkbox">
+          <input type="checkbox" name="consent" value="yes" required>
+          OK to email or text me about K1 rentals. <span class="req">(required)</span>
+        </label>
+
+        <button type="submit" class="btn btn-book btn-book-lg">Check Availability</button>
+        <p class="contact-form-note">
+          We reply within 24–48 hours. Need it sooner? Call or text 780-695-2894.
+        </p>
+        <p class="contact-form-note">No spam. Your details are only used to reply to you.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="section final-cta">
+  <div class="wrap">
+    <h2>Ready To Get Started?</h2>
+    <p>Give us a call and we'll take it from there.</p>
+    <a href="book.html" class="btn btn-book btn-book-lg">Book Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/k1-logo-wide.jpg" alt="K1 Outdoors">
+        <p>Camping Made Easy</p>
+        <p>12331 St Albert Trail NW, Edmonton, AB</p>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:james@k1outdoors.com">james@k1outdoors.com</a>
+        <a href="tel:+17806952894">780-695-2894</a>
+        <div class="footer-social">
+          <a href="https://instagram.com/k1rentals" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" title="NEEDS CONFIRMATION — Facebook URL">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.76 0-5 2.24-5 5v2H7v4h2v8h4v-8h3l1-4h-4v-2c0-.55.45-1 1-1z"/></svg>
+          </a>
+        </div>
+        <a href="book.html" class="btn btn-book btn-book-sm" style="margin-top:10px; align-self:flex-start;">Book Now</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> K1 Outdoors. All rights reserved.</span>
+      <span>Edmonton, Alberta</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-book"><a href="book.html" class="btn btn-book">Book Now</a></div>
+
+<script src="script.js"></script>
+</body>
+</html>
