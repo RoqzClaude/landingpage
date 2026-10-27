@@ -101,20 +101,32 @@ button { font-family: inherit; }
 }
 .btn-outline:hover { background: var(--teal-dark); color: var(--white); }
 
-/* ---------- Promo caution-tape banner ---------- */
-.caution-banner {
-  display: block; position: relative; z-index: 90; overflow: hidden;
-  background: var(--teal-dark);
-  padding: 10px 16px; text-align: center; text-decoration: none;
+/* ---------- Weather forecast strip ---------- */
+.weather-strip { position: relative; z-index: 90; background: var(--teal-dark); padding: 10px 0; }
+.weather-strip-inner {
+  display: flex; align-items: center; gap: 16px;
+  overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none;
 }
-.caution-banner span {
-  display: inline-block; background: var(--charcoal); color: var(--tan);
-  font-family: var(--font-display); font-weight: 600; letter-spacing: 0.02em;
-  font-size: 0.95rem; padding: 6px 18px; border-radius: 999px;
+.weather-strip-inner::-webkit-scrollbar { display: none; }
+.weather-strip-label {
+  flex: 0 0 auto; font-family: var(--font-display); font-weight: 600; font-size: 0.85rem;
+  color: var(--white); padding-right: 12px; border-right: 1px solid rgba(255,255,255,0.3);
+  white-space: nowrap;
 }
-.caution-banner:hover span { background: #000; }
-@media (max-width: 560px) {
-  .caution-banner span { font-size: 0.8rem; padding: 6px 12px; }
+.weather-days { display: flex; align-items: center; gap: 18px; flex: 1 1 auto; }
+.weather-loading { color: rgba(255,255,255,0.85); font-size: 0.85rem; white-space: nowrap; }
+.weather-day {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  flex: 0 0 auto; color: var(--white); font-size: 0.78rem; min-width: 52px;
+}
+.weather-day .wd-name { font-weight: 700; letter-spacing: 0.02em; }
+.weather-day .wd-icon { font-size: 1.2rem; line-height: 1; margin: 2px 0; }
+.weather-day .wd-temps { white-space: nowrap; }
+.weather-day .wd-temps .wd-hi { font-weight: 700; color: var(--tan); }
+.weather-day .wd-temps .wd-lo { color: rgba(255,255,255,0.7); }
+@media (max-width: 760px) {
+  .weather-strip-label { display: none; }
+  .weather-day { min-width: 46px; font-size: 0.72rem; }
 }
 
 /* ---------- Header ---------- */
