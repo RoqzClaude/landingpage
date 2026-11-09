@@ -1,0 +1,60 @@
+<svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="edmontonIllusTitle">
+  <title id="edmontonIllusTitle">Illustration of Edmonton's river valley, High Level Bridge, and the Muttart Conservatory pyramids, in K1 Outdoors brand colors</title>
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="600" height="380" fill="#fbf8f2"/>
+
+  <!-- Sun -->
+  <circle cx="96" cy="78" r="34" fill="#d9a97a"/>
+
+  <!-- Far river valley ridge -->
+  <path d="M0,190 C90,150 170,170 240,158 C320,144 380,176 460,160 C520,148 560,166 600,152 L600,380 L0,380 Z" fill="#9fcac3"/>
+
+  <!-- Evergreens on the far ridge -->
+  <g fill="#3f827b">
+    <path d="M70,186 L84,186 L77,164 Z"/>
+    <path d="M78,186 L94,186 L86,160 Z"/>
+    <path d="M500,172 L514,172 L507,150 Z"/>
+    <path d="M510,174 L526,174 L518,148 Z"/>
+  </g>
+
+  <!-- North Saskatchewan River -->
+  <path d="M0,232 C100,210 160,246 260,226 C360,206 420,240 520,220 C560,212 580,218 600,214 L600,300 C520,282 460,296 400,286 C320,272 260,292 180,282 C110,274 60,284 0,270 Z" fill="#5fa8a0"/>
+  <path d="M0,232 C100,210 160,246 260,226 C360,206 420,240 520,220 C560,212 580,218 600,214" fill="none" stroke="#fbf8f2" stroke-width="2" opacity="0.5"/>
+
+  <!-- High Level Bridge, spanning the river -->
+  <g stroke="#1c1c1e" stroke-width="3" fill="none">
+    <line x1="60" y1="206" x2="60" y2="252"/>
+    <line x1="540" y1="196" x2="540" y2="246"/>
+    <path d="M60,206 L600,214" stroke-width="4"/>
+    <path d="M60,218 Q130,250 200,218" />
+    <path d="M200,218 Q270,250 340,218" />
+    <path d="M340,218 Q410,250 480,218" />
+    <path d="M480,218 Q520,236 540,222" />
+  </g>
+
+  <!-- Near riverbank / foreground ground -->
+  <path d="M0,286 C120,264 200,300 320,282 C420,268 500,292 600,274 L600,380 L0,380 Z" fill="#1c1c1e"/>
+
+  <!-- Muttart Conservatory pyramids -->
+  <g>
+    <!-- back-left pyramid (tropical) -->
+    <polygon points="150,284 206,284 178,206" fill="#3f827b" stroke="#1c1c1e" stroke-width="2"/>
+    <path d="M178,206 L178,284 M160,284 L178,238 L196,284" stroke="#fbf8f2" stroke-width="1.5" fill="none" opacity="0.65"/>
+
+    <!-- tall feature pyramid (show pyramid) -->
+    <polygon points="206,284 300,284 253,152" fill="#5fa8a0" stroke="#1c1c1e" stroke-width="2.5"/>
+    <path d="M253,152 L253,284 M222,284 L253,206 L284,284 M237,284 L253,240 L269,284" stroke="#fbf8f2" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+    <!-- arid pyramid -->
+    <polygon points="300,284 356,284 328,214" fill="#d9a97a" stroke="#1c1c1e" stroke-width="2"/>
+    <path d="M328,214 L328,284 M310,284 L328,240 L346,284" stroke="#fbf8f2" stroke-width="1.5" fill="none" opacity="0.65"/>
+
+    <!-- small front pyramid -->
+    <polygon points="356,284 404,284 380,232" fill="#3f827b" stroke="#1c1c1e" stroke-width="2"/>
+    <path d="M380,232 L380,284" stroke="#fbf8f2" stroke-width="1.5" opacity="0.65"/>
+  </g>
+
+  <!-- ground line accent -->
+  <rect x="0" y="282" width="600" height="4" fill="#d9a97a"/>
+</svg>
