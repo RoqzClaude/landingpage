@@ -80,6 +80,14 @@
   .bvj-pitch-list li { position: relative; padding-left: 28px; font-weight: 600; }
   .bvj-pitch-list li::before { content: "✓"; position: absolute; left: 0; color: var(--teal-dark); font-weight: 700; }
 
+  .bvj-price {
+    display: inline-flex; flex-direction: column; align-items: center;
+    margin: 28px auto 0; padding: 14px 32px; border-radius: var(--radius-lg);
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+  }
+  .bvj-price-value { font-family: var(--font-display); font-weight: 700; font-size: 2rem; color: var(--tan); line-height: 1; }
+  .bvj-price-label { font-size: 0.82rem; color: rgba(255,255,255,0.75); margin-top: 6px; }
+
   .bvj-form-card {
     max-width: 520px; margin: 0 auto; background: var(--white);
     border: 1px solid var(--border); border-radius: var(--radius-lg);
@@ -101,6 +109,32 @@
   .bvj-footer p { margin: 4px 0; }
 
   .bvj-gallery-item { cursor: default; }
+
+  .bvj-lineup-card {
+    max-width: 720px; margin: 32px auto 0; background: var(--bvj-navy);
+    border: 2px solid rgba(255,255,255,0.15); border-radius: var(--radius-lg);
+    padding: 36px 28px; text-align: center; color: #fff;
+  }
+  .bvj-lineup-headliners {
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+    gap: 14px; margin-bottom: 22px;
+  }
+  .bvj-lineup-headliners span.name {
+    font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1.1;
+  }
+  .bvj-lineup-plus { color: var(--bvj-red); font-weight: 700; }
+  .bvj-lineup-kickoff {
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; color: var(--tan);
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .bvj-lineup-kickoff-name { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; margin-bottom: 18px; color: #fff; }
+  .bvj-lineup-tier2 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin-bottom: 16px; color: #fff; }
+  .bvj-lineup-tier3 { font-size: 0.86rem; font-weight: 600; line-height: 1.9; color: rgba(255,255,255,0.88); }
+  .bvj-lineup-plusword {
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; color: var(--tan);
+    text-transform: uppercase; margin: 16px 0 8px;
+  }
+  .bvj-lineup-extras { font-size: 0.86rem; font-weight: 600; line-height: 1.9; color: rgba(255,255,255,0.88); }
 
   @media (max-width: 520px) {
     .bvj-form-card { padding: 28px 22px; }
@@ -134,6 +168,10 @@
       <li>First access, ahead of public release</li>
       <li>Limited VIP tents available</li>
     </ul>
+    <div class="bvj-price">
+      <span class="bvj-price-value">Starting at $2,299</span>
+      <span class="bvj-price-label">per VIP tent</span>
+    </div>
   </div>
 </section>
 
@@ -205,6 +243,38 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- LINEUP -->
+<section class="section" style="background: var(--cream);">
+  <div class="wrap">
+    <p class="eyebrow center" style="display:block;">2027 Lineup</p>
+    <h2 class="center">Who's Playing BVJ</h2>
+    <div class="bvj-lineup-card">
+      <div class="bvj-lineup-headliners">
+        <span class="name">JON PARDI</span>
+        <span class="bvj-lineup-plus">+</span>
+        <span class="name">ALABAMA</span>
+        <span class="bvj-lineup-plus">+</span>
+        <span class="name">LUKE BRYAN</span>
+      </div>
+      <p class="bvj-lineup-kickoff">Kick Off Party Featuring</p>
+      <p class="bvj-lineup-kickoff-name">Josh Ross</p>
+      <p class="bvj-lineup-tier2">MEGHAN PATRICK + DALLAS SMITH + SCOTTY MCCREERY</p>
+      <p class="bvj-lineup-tier3">
+        MONTGOMERY GENTRY FT. EDDIE MONTGOMERY<br>
+        SHENANDOAH + JACKSON DEAN + PARMALEE<br>
+        GORD BAMFORD + CARTER FAITH + KALSEY KULYK + ASHLEY COOKE<br>
+        ANNA GRAVES + MITCH ZORN + TONY STEVENS + CHEVY BEAULIEU + ALEE<br>
+        JAIDEN RILEY + MANDY MCMILLAN + NOLAN COMPTON + TRAVIS DOLTER
+      </p>
+      <p class="bvj-lineup-plusword">Plus</p>
+      <p class="bvj-lineup-extras">
+        BULLS FOR BREAKFAST | SONGWRITERS SHOWCASE<br>
+        COOK COUNTY SALOON AT BVJ | HORIZON YOUTH SHOWCASE
+      </p>
+      <p class="bvj-lineup-plusword">And More!</p>
+    </div>
 </section>
 
 <!-- FOOTER: no links, nothing to click off to -->
