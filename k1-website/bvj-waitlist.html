@@ -44,25 +44,32 @@
   body { padding-bottom: 0 !important; }
 
   .bvj-hero {
-    background: var(--bvj-navy);
+    position: relative; overflow: hidden; background: var(--bvj-navy);
     color: #fff; text-align: center; padding: 48px 0 56px;
   }
-  .bvj-lockup {
-    display: flex; align-items: center; justify-content: center; gap: 18px;
-    flex-wrap: wrap; margin-bottom: 28px;
+  .bvj-hero .wrap { position: relative; z-index: 1; }
+  .bvj-hero-decor {
+    position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
   }
-  .bvj-lockup img { height: 44px; width: auto; border-radius: 8px; }
-  .bvj-lockup-x { font-family: var(--font-display); font-size: 1.4rem; color: rgba(255,255,255,0.6); }
+  .bvj-hero-decor span {
+    position: absolute; opacity: 0.16; filter: grayscale(1) brightness(2);
+  }
+  .bvj-lockup {
+    display: flex; align-items: center; justify-content: center; gap: 24px;
+    flex-wrap: wrap; margin-bottom: 32px;
+  }
+  .bvj-lockup img { height: 68px; width: auto; border-radius: 10px; }
+  .bvj-lockup-x { font-family: var(--font-display); font-size: 2.1rem; color: rgba(255,255,255,0.6); }
   .bvj-wordmark {
     display: inline-flex; flex-direction: column; align-items: center; line-height: 1;
     font-family: var(--font-display); font-weight: 700;
   }
-  .bvj-wordmark .bvj-small { color: var(--bvj-red); font-size: 0.72rem; letter-spacing: 0.12em; }
-  .bvj-wordmark .bvj-big { color: #fff; font-size: 1.9rem; letter-spacing: 0.02em; margin: 1px 0; }
+  .bvj-wordmark .bvj-small { color: var(--bvj-red); font-size: 1rem; letter-spacing: 0.12em; }
+  .bvj-wordmark .bvj-big { color: #fff; font-size: 2.8rem; letter-spacing: 0.02em; margin: 3px 0; }
   .bvj-wordmark .bvj-tag {
-    margin-top: 6px; background: var(--bvj-navy); border: 1px solid rgba(255,255,255,0.35);
-    color: #fff; font-family: var(--font-body); font-weight: 700; font-size: 0.62rem;
-    letter-spacing: 0.08em; padding: 2px 10px; border-radius: 999px;
+    margin-top: 8px; background: var(--bvj-navy); border: 1px solid rgba(255,255,255,0.35);
+    color: #fff; font-family: var(--font-body); font-weight: 700; font-size: 0.78rem;
+    letter-spacing: 0.08em; padding: 3px 14px; border-radius: 999px;
   }
   .bvj-hero h1 {
     color: #fff; font-size: clamp(1.9rem, 4.4vw, 2.9rem); max-width: 760px;
@@ -147,6 +154,14 @@
 
 <!-- HERO (dual brand, no nav, nothing clickable to leave this page) -->
 <section class="bvj-hero">
+  <div class="bvj-hero-decor" aria-hidden="true">
+    <span style="top:8%; left:6%; font-size:2.6rem; transform:rotate(-12deg);">🤠</span>
+    <span style="top:62%; left:4%; font-size:2.2rem; transform:rotate(8deg);">🐎</span>
+    <span style="top:14%; right:6%; font-size:2.4rem; transform:rotate(10deg);">⭐</span>
+    <span style="top:70%; right:8%; font-size:2.6rem; transform:rotate(-8deg);">👢</span>
+    <span style="top:40%; left:14%; font-size:1.8rem; transform:rotate(-15deg);">🎸</span>
+    <span style="top:46%; right:16%; font-size:2rem; transform:rotate(14deg);">🪢</span>
+  </div>
   <div class="wrap">
     <div class="bvj-lockup">
       <img src="assets/k1-logo-wide.jpg" alt="K1 Outdoors">
@@ -167,6 +182,7 @@
     </p>
     <ul class="bvj-pitch-list">
       <li>Furnished glamping tent set up close to the stage</li>
+      <li>Beds, bedding, lights, and other cozy touches included</li>
       <li>First access, ahead of public release</li>
       <li>Limited VIP tents available</li>
     </ul>
