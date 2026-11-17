@@ -59,18 +59,8 @@
     flex-wrap: wrap; margin-bottom: 32px;
   }
   .bvj-lockup img { height: 68px; width: auto; border-radius: 10px; }
+  .bvj-lockup .bvj-logo-img { height: 94px; background: #fff; border-radius: 10px; padding: 8px 14px; box-sizing: content-box; }
   .bvj-lockup-x { font-family: var(--font-display); font-size: 2.1rem; color: rgba(255,255,255,0.6); }
-  .bvj-wordmark {
-    display: inline-flex; flex-direction: column; align-items: center; line-height: 1;
-    font-family: var(--font-display); font-weight: 700;
-  }
-  .bvj-wordmark .bvj-small { color: var(--bvj-red); font-size: 1rem; letter-spacing: 0.12em; }
-  .bvj-wordmark .bvj-big { color: #fff; font-size: 2.8rem; letter-spacing: 0.02em; margin: 3px 0; }
-  .bvj-wordmark .bvj-tag {
-    margin-top: 8px; background: var(--bvj-navy); border: 1px solid rgba(255,255,255,0.35);
-    color: #fff; font-family: var(--font-body); font-weight: 700; font-size: 0.78rem;
-    letter-spacing: 0.08em; padding: 3px 14px; border-radius: 999px;
-  }
   .bvj-hero h1 {
     color: #fff; font-size: clamp(1.9rem, 4.4vw, 2.9rem); max-width: 760px;
     margin: 0 auto 16px;
@@ -120,30 +110,10 @@
   .bvj-gallery-item { cursor: default; }
 
   .bvj-lineup-card {
-    max-width: 720px; margin: 32px auto 0; background: var(--bvj-navy);
-    border: 2px solid rgba(255,255,255,0.15); border-radius: var(--radius-lg);
-    padding: 36px 28px; text-align: center; color: #fff;
+    max-width: 640px; margin: 32px auto 0; text-align: center;
+    box-shadow: var(--shadow-lifted); border-radius: var(--radius-md); overflow: hidden;
   }
-  .bvj-lineup-headliners {
-    display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
-    gap: 14px; margin-bottom: 22px;
-  }
-  .bvj-lineup-headliners span.name {
-    font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1.1;
-  }
-  .bvj-lineup-plus { color: var(--bvj-red); font-weight: 700; }
-  .bvj-lineup-kickoff {
-    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; color: var(--tan);
-    text-transform: uppercase; margin-bottom: 8px;
-  }
-  .bvj-lineup-kickoff-name { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; margin-bottom: 18px; color: #fff; }
-  .bvj-lineup-tier2 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin-bottom: 16px; color: #fff; }
-  .bvj-lineup-tier3 { font-size: 0.86rem; font-weight: 600; line-height: 1.9; color: rgba(255,255,255,0.88); }
-  .bvj-lineup-plusword {
-    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; color: var(--tan);
-    text-transform: uppercase; margin: 16px 0 8px;
-  }
-  .bvj-lineup-extras { font-size: 0.86rem; font-weight: 600; line-height: 1.9; color: rgba(255,255,255,0.88); }
+  .bvj-lineup-card img { display: block; width: 100%; height: auto; }
 
   @media (max-width: 520px) {
     .bvj-form-card { padding: 28px 22px; }
@@ -166,12 +136,7 @@
     <div class="bvj-lockup">
       <img src="assets/k1-logo-wide.jpg" alt="K1 Outdoors">
       <span class="bvj-lockup-x">×</span>
-      <span class="bvj-wordmark" aria-label="Big Valley Jamboree">
-        <span class="bvj-small">BIG VALLEY</span>
-        <span class="bvj-big">BVJ</span>
-        <span class="bvj-small">JAMBOREE</span>
-        <span class="bvj-tag">CAMROSE, ALBERTA · EST. 1993</span>
-      </span>
+      <img src="assets/bvj-logo.png" alt="Big Valley Jamboree — Camrose, Alberta, Est. 1993" class="bvj-logo-img">
     </div>
     <p class="bvj-eyebrow">Exclusive Partnership</p>
     <h1>VIP Glamping At Big Valley Jamboree — Join The Waitlist</h1>
@@ -269,29 +234,7 @@
     <p class="eyebrow center" style="display:block;">2027 Lineup</p>
     <h2 class="center">Who's Playing BVJ</h2>
     <div class="bvj-lineup-card">
-      <div class="bvj-lineup-headliners">
-        <span class="name">JON PARDI</span>
-        <span class="bvj-lineup-plus">+</span>
-        <span class="name">ALABAMA</span>
-        <span class="bvj-lineup-plus">+</span>
-        <span class="name">LUKE BRYAN</span>
-      </div>
-      <p class="bvj-lineup-kickoff">Kick Off Party Featuring</p>
-      <p class="bvj-lineup-kickoff-name">Josh Ross</p>
-      <p class="bvj-lineup-tier2">MEGHAN PATRICK + DALLAS SMITH + SCOTTY MCCREERY</p>
-      <p class="bvj-lineup-tier3">
-        MONTGOMERY GENTRY FT. EDDIE MONTGOMERY<br>
-        SHENANDOAH + JACKSON DEAN + PARMALEE<br>
-        GORD BAMFORD + CARTER FAITH + KALSEY KULYK + ASHLEY COOKE<br>
-        ANNA GRAVES + MITCH ZORN + TONY STEVENS + CHEVY BEAULIEU + ALEE<br>
-        JAIDEN RILEY + MANDY MCMILLAN + NOLAN COMPTON + TRAVIS DOLTER
-      </p>
-      <p class="bvj-lineup-plusword">Plus</p>
-      <p class="bvj-lineup-extras">
-        BULLS FOR BREAKFAST | SONGWRITERS SHOWCASE<br>
-        COOK COUNTY SALOON AT BVJ | HORIZON YOUTH SHOWCASE
-      </p>
-      <p class="bvj-lineup-plusword">And More!</p>
+      <img src="assets/bvj-lineup.png" alt="BVJ 2027 lineup: headliners Jon Pardi, Alabama, and Luke Bryan; kick off party featuring Josh Ross; Meghan Patrick, Dallas Smith, Scotty McCreery; plus Montgomery Gentry ft. Eddie Montgomery, Shenandoah, Jackson Dean, Parmalee, Gord Bamford, Carter Faith, Kalsey Kulyk, Ashley Cooke, Anna Graves, Mitch Zorn, Tony Stevens, Chevy Beaulieu, Alee, Jaiden Riley, Mandy McMillan, Nolan Compton, Travis Dolter, and more.">
     </div>
 </section>
 
