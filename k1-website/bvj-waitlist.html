@@ -42,17 +42,9 @@
   body { padding-bottom: 0 !important; }
 
   .bvj-hero {
-    position: relative; overflow: hidden; background: var(--bvj-navy);
+    background: var(--bvj-navy);
     color: #fff; text-align: center; padding: 48px 0 56px;
   }
-  .bvj-hero-photo {
-    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.38;
-  }
-  .bvj-hero-scrim {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(20,33,61,0.55) 0%, rgba(20,33,61,0.92) 100%);
-  }
-  .bvj-hero-inner { position: relative; z-index: 1; }
   .bvj-lockup {
     display: flex; align-items: center; justify-content: center; gap: 18px;
     flex-wrap: wrap; margin-bottom: 28px;
@@ -108,6 +100,8 @@
   }
   .bvj-footer p { margin: 4px 0; }
 
+  .bvj-gallery-item { cursor: default; }
+
   @media (max-width: 520px) {
     .bvj-form-card { padding: 28px 22px; }
   }
@@ -117,9 +111,7 @@
 
 <!-- HERO (dual brand, no nav, nothing clickable to leave this page) -->
 <section class="bvj-hero">
-  <img class="bvj-hero-photo" src="assets/tent-festival-stage.jpg" alt="">
-  <div class="bvj-hero-scrim"></div>
-  <div class="wrap bvj-hero-inner">
+  <div class="wrap">
     <div class="bvj-lockup">
       <img src="assets/k1-logo-wide.jpg" alt="K1 Outdoors">
       <span class="bvj-lockup-x">×</span>
@@ -182,6 +174,34 @@
         <div class="bvj-success-icon" aria-hidden="true">✓</div>
         <h2>You're On The List</h2>
         <p class="lede center">Thanks — we've got your spot reserved on the waitlist. K1 and BVJ will reach out directly with next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY (trust/social proof) -->
+<section class="section" style="background: var(--white);">
+  <div class="wrap">
+    <p class="eyebrow center" style="display:block;">See it for yourself</p>
+    <h2 class="center">K1 Glamping Tents In Action</h2>
+    <div class="photo-grid" style="margin-top: 32px;">
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-festival-stage.jpg" alt="K1 Outdoors tent set up on the grass in front of a festival stage">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-interior-lakeview.jpg" alt="Furnished K1 glamping tent interior with a lake view">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-lantern-decor.jpg" alt="K1 Outdoors tent decorated with hanging lanterns for an evening event">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-row-campground.jpg" alt="Several K1 Outdoors tents set up in a row">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-festival-booth.jpg" alt="K1 Outdoors tent set up as a booth at a festival">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-dusk-mountains.jpg" alt="K1 Outdoors tent at dusk with mountains in the background">
       </div>
     </div>
   </div>
