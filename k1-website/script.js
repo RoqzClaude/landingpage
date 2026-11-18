@@ -4,6 +4,35 @@ document.querySelectorAll('[data-year]').forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
+// Lead magnet popup (homepage only)
+const leadPopup = document.getElementById('leadPopup');
+if (leadPopup) {
+  const leadPopupClose = document.getElementById('leadPopupClose');
+  const dismissPopup = () => {
+    leadPopup.classList.remove('open');
+    try {
+      localStorage.setItem('k1_popup_dismissed', '1');
+    } catch (e) {
+      // localStorage unavailable (private browsing, etc.) — popup just won't be remembered.
+    }
+  };
+  let alreadyDismissed = false;
+  try {
+    alreadyDismissed = localStorage.getItem('k1_popup_dismissed') === '1';
+  } catch (e) {
+    alreadyDismissed = false;
+  }
+  if (!alreadyDismissed) {
+    leadPopup.classList.add('open');
+  }
+  if (leadPopupClose) {
+    leadPopupClose.addEventListener('click', dismissPopup);
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') dismissPopup();
+  });
+}
+
 // Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');

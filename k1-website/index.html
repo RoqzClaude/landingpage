@@ -55,6 +55,26 @@
 </head>
 <body>
 
+<!-- LEAD MAGNET POPUP -->
+<div class="lead-popup-overlay" id="leadPopup">
+  <button class="lead-popup-close" id="leadPopupClose" aria-label="Close">&times;</button>
+  <div class="lead-popup-inner">
+    <p class="eyebrow center" style="display:block;">Join Our Community</p>
+    <h2 class="center">Get A Free Bag Of Firewood</h2>
+    <p class="lede center">Sign up for trip tips and news from K1 — get a free bag of firewood with your next rental.</p>
+    <form name="homepage-popup" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="lead-popup-form">
+      <input type="hidden" name="form-name" value="homepage-popup">
+      <p class="contact-field-hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+      <div class="contact-field">
+        <label for="popup-email">Email <span class="req">(required)</span></label>
+        <input type="email" id="popup-email" name="email" required>
+      </div>
+      <button type="submit" class="btn btn-book btn-book-lg">Join Now</button>
+      <p class="contact-form-note" style="text-align:center;">No spam, unsubscribe anytime.</p>
+    </form>
+  </div>
+</div>
+
 <!-- PROMO BANNER -->
 <div class="weather-strip">
   <div class="wrap weather-strip-inner">

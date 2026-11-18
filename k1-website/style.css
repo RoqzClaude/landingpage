@@ -290,6 +290,26 @@ button { font-family: inherit; }
   background: none; border: none; cursor: pointer; line-height: 1;
 }
 
+/* ---------- Full-screen lead magnet popup ---------- */
+.lead-popup-overlay {
+  display: none; position: fixed; inset: 0; z-index: 300;
+  background: var(--cream); align-items: center; justify-content: center;
+  padding: 24px; overflow-y: auto;
+}
+.lead-popup-overlay.open { display: flex; }
+.lead-popup-inner { max-width: 480px; width: 100%; text-align: center; }
+.lead-popup-inner h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin-bottom: 10px; }
+.lead-popup-inner .lede { margin-left: auto; margin-right: auto; }
+.lead-popup-form { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; text-align: left; }
+.lead-popup-form .btn { width: 100%; }
+.lead-popup-close {
+  position: absolute; top: 20px; right: 24px; color: var(--ink); font-size: 2.2rem;
+  background: none; border: none; cursor: pointer; line-height: 1; z-index: 1;
+}
+@media (max-width: 520px) {
+  .lead-popup-close { top: 14px; right: 16px; }
+}
+
 /* ---------- Gallery viewer (featured photo + thumbnail strip) ---------- */
 .gallery-main {
   border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lifted);
