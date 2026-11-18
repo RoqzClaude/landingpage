@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F87598NVN3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F87598NVN3');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z3weduc9js");
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VIP Glamping Waitlist — K1 Outdoors × Big Valley Jamboree</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://k1outdoors.com/bvj-waitlist.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Page-specific: no nav, no exit links, dual K1 + BVJ branding. */
+  :root {
+    --bvj-navy: #14213d;
+    --bvj-red: #e8334f;
+    --font-display: 'Anton', sans-serif;
+  }
+  h1, h2 { letter-spacing: 0.01em; text-transform: uppercase; }
+  body { padding-bottom: 0 !important; }
+
+  .bvj-hero {
+    position: relative; overflow: hidden; background: var(--bvj-navy);
+    color: #fff; text-align: center; padding: 48px 0 56px;
+  }
+  .bvj-hero .wrap { position: relative; z-index: 1; }
+  .bvj-hero-decor {
+    position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+  }
+  .bvj-hero-decor span {
+    position: absolute; opacity: 0.16; filter: grayscale(1) brightness(2);
+  }
+  .bvj-lockup {
+    display: flex; align-items: center; justify-content: center; gap: 24px;
+    flex-wrap: wrap; margin-bottom: 32px;
+  }
+  .bvj-lockup img { height: 68px; width: auto; border-radius: 10px; }
+  .bvj-lockup .bvj-logo-img { height: 94px; background: #fff; border-radius: 10px; padding: 8px 14px; box-sizing: content-box; }
+  .bvj-lockup-x { font-family: var(--font-display); font-size: 2.1rem; color: rgba(255,255,255,0.6); }
+  .bvj-hero h1 {
+    color: #fff; font-size: clamp(1.9rem, 4.4vw, 2.9rem); max-width: 760px;
+    margin: 0 auto 16px;
+  }
+  .bvj-hero .lede { color: rgba(255,255,255,0.85); max-width: 580px; margin: 0 auto; }
+  .bvj-eyebrow {
+    display: inline-block; font-family: var(--font-display); font-weight: 600;
+    font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--bvj-red); margin-bottom: 14px;
+  }
+
+  .bvj-pitch-list {
+    list-style: none; margin: 32px auto 0; padding: 0; max-width: 520px;
+    display: grid; gap: 12px; text-align: left;
+  }
+  .bvj-pitch-list li { position: relative; padding-left: 28px; font-weight: 600; }
+  .bvj-pitch-list li::before { content: "✓"; position: absolute; left: 0; color: var(--teal-dark); font-weight: 700; }
+
+  .bvj-price {
+    display: inline-flex; flex-direction: column; align-items: center;
+    margin: 28px auto 0; padding: 14px 32px; border-radius: var(--radius-lg);
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+  }
+  .bvj-price-value { font-family: var(--font-display); font-weight: 700; font-size: 2rem; color: var(--tan); line-height: 1; }
+  .bvj-price-label { font-size: 0.82rem; color: rgba(255,255,255,0.75); margin-top: 6px; }
+
+  .bvj-form-card {
+    max-width: 520px; margin: 0 auto; background: var(--white);
+    border: 1px solid var(--border); border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card); padding: 36px 32px;
+  }
+  #bvjForm[hidden] { display: none; }
+  .bvj-success { text-align: center; padding: 20px 0; }
+  .bvj-success .bvj-success-icon {
+    width: 56px; height: 56px; border-radius: 50%; background: var(--teal);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem; margin: 0 auto 18px;
+  }
+  .bvj-error { color: var(--bvj-red); font-weight: 600; font-size: 0.9rem; margin-top: 4px; }
+
+  .bvj-footer {
+    background: var(--charcoal); color: rgba(255,255,255,0.65);
+    padding: 28px 0; text-align: center; font-size: 0.82rem;
+  }
+  .bvj-footer p { margin: 4px 0; }
+
+  .bvj-gallery-item { cursor: default; }
+
+  .bvj-lineup-card {
+    max-width: 640px; margin: 32px auto 0; text-align: center;
+    box-shadow: var(--shadow-lifted); border-radius: var(--radius-md); overflow: hidden;
+  }
+  .bvj-lineup-card img { display: block; width: 100%; height: auto; }
+
+  @media (max-width: 520px) {
+    .bvj-form-card { padding: 28px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO (dual brand, no nav, nothing clickable to leave this page) -->
+<section class="bvj-hero">
+  <div class="bvj-hero-decor" aria-hidden="true">
+    <span style="top:8%; left:6%; font-size:2.6rem; transform:rotate(-12deg);">🤠</span>
+    <span style="top:62%; left:4%; font-size:2.2rem; transform:rotate(8deg);">🐎</span>
+    <span style="top:14%; right:6%; font-size:2.4rem; transform:rotate(10deg);">⭐</span>
+    <span style="top:70%; right:8%; font-size:2.6rem; transform:rotate(-8deg);">👢</span>
+    <span style="top:40%; left:14%; font-size:1.8rem; transform:rotate(-15deg);">🎸</span>
+    <span style="top:46%; right:16%; font-size:2rem; transform:rotate(14deg);">🪢</span>
+  </div>
+  <div class="wrap">
+    <div class="bvj-lockup">
+      <img src="assets/k1-logo-wide.jpg" alt="K1 Outdoors">
+      <span class="bvj-lockup-x">×</span>
+      <img src="assets/bvj-logo.png" alt="Big Valley Jamboree — Camrose, Alberta, Est. 1993" class="bvj-logo-img">
+    </div>
+    <p class="bvj-eyebrow">Exclusive Partnership</p>
+    <h1>VIP Glamping At Big Valley Jamboree — Join The Waitlist</h1>
+    <p class="lede center">
+      K1 Outdoors and Big Valley Jamboree are teaming up to bring a limited
+      number of VIP glamping tents to next year's festival. Join the
+      waitlist for first access — we'll reach out directly with details.
+    </p>
+    <ul class="bvj-pitch-list">
+      <li>Furnished glamping tent set up close to the stage</li>
+      <li>Beds, bedding, lights, and other cozy touches included</li>
+      <li>First access, ahead of public release</li>
+      <li>Limited VIP tents available</li>
+    </ul>
+    <div class="bvj-price">
+      <span class="bvj-price-value">Starting at $2,299</span>
+      <span class="bvj-price-label">per VIP tent</span>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section" style="background: var(--cream);">
+  <div class="wrap">
+    <div class="bvj-form-card">
+      <p class="eyebrow center" style="display:block;">Reserve your spot</p>
+      <h2 class="center" style="margin-bottom: 22px;">Join The Waitlist</h2>
+
+      <form name="bvj-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="bvjForm">
+        <input type="hidden" name="form-name" value="bvj-waitlist">
+        <p class="contact-field-hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+
+        <div class="contact-field">
+          <label for="bvj-name">Name <span class="req">(required)</span></label>
+          <input type="text" id="bvj-name" name="name" required>
+        </div>
+        <div class="contact-field">
+          <label for="bvj-email">Email <span class="req">(required)</span></label>
+          <input type="email" id="bvj-email" name="email" required>
+        </div>
+        <div class="contact-field">
+          <label for="bvj-phone">Phone <span class="req">(required)</span></label>
+          <input type="tel" id="bvj-phone" name="phone" required>
+        </div>
+        <div class="contact-field">
+          <label for="bvj-group-size">How many people are you planning on going with? <span class="req">(required)</span></label>
+          <input type="number" id="bvj-group-size" name="group_size" min="1" required>
+        </div>
+
+        <button type="submit" class="btn btn-book btn-book-lg" style="width:100%; margin-top: 8px;">Join The Waitlist</button>
+        <p class="contact-form-note" style="text-align:center;">We'll reach out directly — no need to do anything else.</p>
+        <p class="bvj-error" id="bvjError" hidden>Something went wrong submitting the form — please try again.</p>
+      </form>
+
+      <div class="bvj-success" id="bvjSuccess" hidden>
+        <div class="bvj-success-icon" aria-hidden="true">✓</div>
+        <h2>You're On The List</h2>
+        <p class="lede center">Thanks — we've got your spot reserved on the waitlist. K1 and BVJ will reach out directly with next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY (trust/social proof) -->
+<section class="section" style="background: var(--white);">
+  <div class="wrap">
+    <p class="eyebrow center" style="display:block;">See it for yourself</p>
+    <h2 class="center">K1 Glamping Tents In Action</h2>
+    <div class="photo-grid" style="margin-top: 32px;">
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-festival-stage.jpg" alt="K1 Outdoors tent set up on the grass in front of a festival stage">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-interior-lakeview.jpg" alt="Furnished K1 glamping tent interior with a lake view">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-lantern-decor.jpg" alt="K1 Outdoors tent decorated with hanging lanterns for an evening event">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-row-campground.jpg" alt="Several K1 Outdoors tents set up in a row">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-festival-booth.jpg" alt="K1 Outdoors tent set up as a booth at a festival">
+      </div>
+      <div class="photo-item bvj-gallery-item">
+        <img src="assets/tent-dusk-mountains.jpg" alt="K1 Outdoors tent at dusk with mountains in the background">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINEUP -->
+<section class="section" style="background: var(--cream);">
+  <div class="wrap">
+    <p class="eyebrow center" style="display:block;">2027 Lineup</p>
+    <h2 class="center">Who's Playing BVJ</h2>
+    <div class="bvj-lineup-card">
+      <img src="assets/bvj-lineup.png" alt="BVJ 2027 lineup: headliners Jon Pardi, Alabama, and Luke Bryan; kick off party featuring Josh Ross; Meghan Patrick, Dallas Smith, Scotty McCreery; plus Montgomery Gentry ft. Eddie Montgomery, Shenandoah, Jackson Dean, Parmalee, Gord Bamford, Carter Faith, Kalsey Kulyk, Ashley Cooke, Anna Graves, Mitch Zorn, Tony Stevens, Chevy Beaulieu, Alee, Jaiden Riley, Mandy McMillan, Nolan Compton, Travis Dolter, and more.">
+    </div>
+</section>
+
+<!-- FOOTER: no links, nothing to click off to -->
+<footer class="bvj-footer">
+  <p><strong>K1 Outdoors</strong> × Big Valley Jamboree</p>
+  <p>12331 St Albert Trail NW, Edmonton, AB</p>
+  <p>© <span data-year></span> K1 Outdoors. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+
+  var form = document.getElementById('bvjForm');
+  var success = document.getElementById('bvjSuccess');
+  var errorEl = document.getElementById('bvjError');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Form submission failed');
+        form.hidden = true;
+        success.hidden = false;
+      })
+      .catch(function () {
+        errorEl.hidden = false;
+      });
+  });
+</script>
+</body>
+</html>
