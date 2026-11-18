@@ -33,6 +33,10 @@ if (leadPopup) {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') dismissPopup();
   });
+  const leadPopupForm = leadPopup.querySelector('form');
+  if (leadPopupForm) {
+    leadPopupForm.addEventListener('submit', dismissPopup);
+  }
 }
 
 // Mobile nav toggle
