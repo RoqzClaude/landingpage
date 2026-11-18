@@ -23,7 +23,9 @@ if (leadPopup) {
     alreadyDismissed = false;
   }
   if (!alreadyDismissed) {
-    leadPopup.classList.add('open');
+    setTimeout(() => {
+      leadPopup.classList.add('open');
+    }, 2500);
   }
   if (leadPopupClose) {
     leadPopupClose.addEventListener('click', dismissPopup);

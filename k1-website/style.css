@@ -293,7 +293,8 @@ button { font-family: inherit; }
 /* ---------- Full-screen lead magnet popup ---------- */
 .lead-popup-overlay {
   display: none; position: fixed; inset: 0; z-index: 300;
-  background: var(--cream); align-items: center; justify-content: center;
+  background: rgba(251, 248, 242, 0.78); backdrop-filter: blur(1px);
+  align-items: center; justify-content: center;
   padding: 24px; overflow-y: auto;
 }
 .lead-popup-overlay.open { display: flex; }
