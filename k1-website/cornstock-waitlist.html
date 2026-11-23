@@ -207,6 +207,16 @@
   }
   .cs-lineup-card img { display: block; width: 100%; height: auto; }
 
+  .cs-feature-photo-card {
+    max-width: 760px; margin: 0 auto; text-align: center;
+    box-shadow: var(--shadow-lifted); border-radius: var(--radius-lg); overflow: hidden;
+  }
+  .cs-feature-photo-card img { display: block; width: 100%; height: auto; }
+  .cs-feature-caption {
+    margin: 0; padding: 18px; font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: 0.02em; font-size: 1.1rem; color: var(--charcoal); background: var(--white);
+  }
+
   @media (max-width: 520px) {
     .cs-form-card { padding: 28px 22px; }
   }
@@ -253,7 +263,19 @@
   </div>
 </section>
 
-<div class="cs-seam cs-seam-diag" style="--seam-to: var(--cream);" aria-hidden="true"></div>
+<div class="cs-seam cs-seam-diag" style="--seam-to: var(--white);" aria-hidden="true"></div>
+
+<!-- FEATURED TENT PHOTO -->
+<section class="section" style="background: var(--white);">
+  <div class="wrap">
+    <div class="cs-feature-photo-card cs-reveal">
+      <img src="assets/tent-real-front-trees.jpg" alt="K1 Outdoors inflatable glamping tent fully set up among the trees">
+      <p class="cs-feature-caption">Picture this at your campsite.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cs-seam cs-seam-fade" style="--seam-from: var(--white); --seam-to: var(--cream);" aria-hidden="true"></div>
 
 <!-- COUNTDOWN -->
 <section class="cs-countdown">
