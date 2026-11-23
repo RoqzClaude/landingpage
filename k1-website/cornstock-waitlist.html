@@ -92,6 +92,51 @@
   .cs-about-decor { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
   .cs-about-decor span { position: absolute; opacity: 0.1; }
 
+  @keyframes cs-float { 0%, 100% { margin-top: 0; } 50% { margin-top: -10px; } }
+  .cs-hero-decor span, .cs-about-decor span { animation: cs-float 6s ease-in-out infinite; }
+  .cs-hero-decor span:nth-child(2n), .cs-about-decor span:nth-child(2n) { animation-duration: 7.5s; animation-delay: 0.6s; }
+  .cs-hero-decor span:nth-child(3n), .cs-about-decor span:nth-child(3n) { animation-duration: 5.2s; animation-delay: 1.2s; }
+
+  @keyframes cs-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(254,207,148,0.35); }
+    50% { box-shadow: 0 0 0 10px rgba(254,207,148,0); }
+  }
+  .cs-price { animation: cs-pulse 2.6s ease-in-out infinite; }
+
+  .cs-reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .cs-reveal.cs-reveal-visible { opacity: 1; transform: translateY(0); }
+
+  .cs-seam { height: 46px; position: relative; }
+  .cs-seam-fade { background: linear-gradient(to bottom, var(--seam-from), var(--seam-to)); }
+  .cs-seam-diag { background: var(--seam-to); clip-path: polygon(0 100%, 100% 0, 100% 100%); }
+  .cs-seam-diag-rev { background: var(--seam-to); clip-path: polygon(0 0, 100% 100%, 0 100%); }
+  @media (max-width: 560px) { .cs-seam { height: 30px; } }
+
+  .cs-countdown { background: var(--cream); padding: 44px 0 48px; text-align: center; }
+  .cs-countdown-grid {
+    display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;
+    margin-top: 20px; max-width: 520px; margin-left: auto; margin-right: auto;
+  }
+  .cs-countdown-unit {
+    background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md);
+    padding: 16px 18px; min-width: 84px; box-shadow: var(--shadow-card);
+  }
+  .cs-countdown-num {
+    display: block; font-family: var(--font-display); font-size: 2.1rem;
+    color: var(--cs-navy-bottom); transition: transform 0.15s ease; line-height: 1;
+  }
+  .cs-countdown-num.tick { transform: scale(1.15); }
+  .cs-countdown-label {
+    display: block; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); margin-top: 6px;
+  }
+  @media (max-width: 520px) {
+    .cs-countdown-unit { min-width: 66px; padding: 12px 10px; }
+    .cs-countdown-num { font-size: 1.6rem; }
+  }
+
+  .cs-footer-trustpilot { color: var(--muted); text-decoration: underline; }
+
   .cs-shout {
     background: var(--charcoal); padding: 56px 0; text-align: center; overflow: hidden;
   }
@@ -194,6 +239,35 @@
   </div>
 </section>
 
+<div class="cs-seam cs-seam-diag" style="--seam-to: var(--cream);" aria-hidden="true"></div>
+
+<!-- COUNTDOWN -->
+<section class="cs-countdown">
+  <div class="wrap">
+    <p class="eyebrow center" style="display:block;">Countdown To Cornstock '27</p>
+    <div class="cs-countdown-grid cs-reveal" id="csCountdown">
+      <div class="cs-countdown-unit">
+        <span class="cs-countdown-num" id="cdDays">00</span>
+        <span class="cs-countdown-label">Days</span>
+      </div>
+      <div class="cs-countdown-unit">
+        <span class="cs-countdown-num" id="cdHours">00</span>
+        <span class="cs-countdown-label">Hours</span>
+      </div>
+      <div class="cs-countdown-unit">
+        <span class="cs-countdown-num" id="cdMinutes">00</span>
+        <span class="cs-countdown-label">Minutes</span>
+      </div>
+      <div class="cs-countdown-unit">
+        <span class="cs-countdown-num" id="cdSeconds">00</span>
+        <span class="cs-countdown-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cs-seam cs-seam-fade" style="--seam-from: var(--cream); --seam-to: var(--white);" aria-hidden="true"></div>
+
 <!-- ABOUT / THE PARTNERSHIP -->
 <section class="section cs-about">
   <div class="cs-about-decor" aria-hidden="true">
@@ -220,11 +294,13 @@
       the setup. When the weekend's over, we pack it away for you too, so you can just
       head straight out.
     </p>
-    <div class="cs-lineup-card">
+    <div class="cs-lineup-card cs-reveal">
       <img src="assets/tent-festival-booth.jpg" alt="James from K1 Outdoors sitting at the booth table beside a glamping tent, next to the festival stage">
     </div>
   </div>
 </section>
+
+<div class="cs-seam cs-seam-diag-rev" style="--seam-to: var(--cream);" aria-hidden="true"></div>
 
 <!-- FORM -->
 <section class="section" style="background: var(--cream);">
@@ -278,12 +354,14 @@
   </div>
 </section>
 
+<div class="cs-seam cs-seam-fade" style="--seam-from: var(--cream); --seam-to: var(--white);" aria-hidden="true"></div>
+
 <!-- GALLERY (trust/social proof) -->
 <section class="section" style="background: var(--white);">
   <div class="wrap">
     <p class="eyebrow center" style="display:block;">See it for yourself</p>
     <h2 class="center">K1 Glamping Tents In Action</h2>
-    <div class="photo-grid" style="margin-top: 32px;">
+    <div class="photo-grid cs-reveal" style="margin-top: 32px;">
       <div class="photo-item cs-gallery-item">
         <img src="assets/tent-festival-stage.jpg" alt="K1 Outdoors tent set up on the grass in front of a festival stage">
       </div>
@@ -303,20 +381,66 @@
   </div>
 </section>
 
+<div class="cs-seam cs-seam-diag" style="--seam-to: var(--charcoal);" aria-hidden="true"></div>
+
 <!-- BIG STATEMENT -->
 <section class="cs-shout">
   <div class="wrap">
-    <p class="cs-shout-text">Try The Viral Inflatable Tent</p>
+    <p class="cs-shout-text cs-reveal">Try The Viral Inflatable Tent</p>
   </div>
 </section>
+
+<div class="cs-seam cs-seam-diag-rev" style="--seam-to: var(--cream);" aria-hidden="true"></div>
 
 <!-- LINEUP -->
 <section class="section" style="background: var(--cream);">
   <div class="wrap">
     <p class="eyebrow center" style="display:block;">2027 Lineup</p>
     <h2 class="center">Who's Playing Cornstock</h2>
-    <div class="cs-lineup-card">
+    <div class="cs-lineup-card cs-reveal">
       <img src="assets/cornstock-lineup.webp" alt="Cornstock '27, July 22-24 in Taber, AB. Saturday July 24: April Wine, Haywire, Toronto, Wide Mouth Mason. Friday July 23: Finger Eleven, Platinum Blonde X featuring Sergio Galli, The Pursuit of Happiness, Spoons. Thursday July 22: Nazareth, Streetheart, Texas Flood, Runaway.">
+    </div>
+  </div>
+</section>
+
+<div class="cs-seam cs-seam-fade" style="--seam-from: var(--cream); --seam-to: var(--white);" aria-hidden="true"></div>
+
+<!-- FAQ -->
+<section class="section" style="background: var(--white);">
+  <div class="wrap" style="max-width: 760px;">
+    <p class="eyebrow center" style="display:block;">Good to know</p>
+    <h2 class="center">Questions About The Tent</h2>
+    <div class="faq-list cs-reveal">
+      <details class="faq-item" open>
+        <summary>How durable are they?</summary>
+        <div class="faq-answer">
+          <p>Very — these are heavy-duty inflatable AirPole tents, not a backyard pop-up. They're built to hold up to repeated festival use and stay inflated for months once set up properly.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Are they weatherproof?</summary>
+        <div class="faq-answer">
+          <p>Yes — the fabric and rain fly are built to handle rain. You'll stay dry and comfortable no matter what the weekend forecast looks like.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>What happens if it's windy?</summary>
+        <div class="faq-answer">
+          <p>The tents are properly staked and anchored on setup to handle normal festival-weekend wind. Our team sets everything up, so you don't need to worry about securing it yourself.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>What do I need to bring?</summary>
+        <div class="faq-answer">
+          <p>Just yourself, your group, and whatever you'd normally pack for a weekend at the festival. The tent, beds, bedding, and lights are already set up and waiting for you — no gear to haul or set up yourself.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a damage deposit?</summary>
+        <div class="faq-answer">
+          <p>Yes — a damage deposit is collected ahead of time and fully returned after a quick inspection once the festival wraps up.</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -333,6 +457,7 @@
   <div class="wrap cs-footer-bottom">
     <span>12331 St Albert Trail NW, Edmonton, AB</span>
     <span>© <span data-year></span> K1 Outdoors. All rights reserved.</span>
+    <a href="https://ca.trustpilot.com/review/k1outdoors.com" target="_blank" rel="noopener" class="cs-footer-trustpilot">Read our reviews on Trustpilot</a>
   </div>
 </footer>
 
@@ -363,6 +488,47 @@
         errorEl.hidden = false;
       });
   });
+
+  // Countdown to Cornstock '27
+  var csCountdownTarget = new Date('2027-07-22T00:00:00');
+  function csSetCountdownValue(id, value) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var padded = String(value).padStart(2, '0');
+    if (el.textContent !== padded) {
+      el.textContent = padded;
+      el.classList.add('tick');
+      setTimeout(function () { el.classList.remove('tick'); }, 150);
+    }
+  }
+  function csUpdateCountdown() {
+    var diff = csCountdownTarget - new Date();
+    if (diff < 0) diff = 0;
+    csSetCountdownValue('cdDays', Math.floor(diff / 86400000));
+    csSetCountdownValue('cdHours', Math.floor((diff % 86400000) / 3600000));
+    csSetCountdownValue('cdMinutes', Math.floor((diff % 3600000) / 60000));
+    csSetCountdownValue('cdSeconds', Math.floor((diff % 60000) / 1000));
+  }
+  if (document.getElementById('csCountdown')) {
+    csUpdateCountdown();
+    setInterval(csUpdateCountdown, 1000);
+  }
+
+  // Scroll-reveal animation
+  var csRevealEls = document.querySelectorAll('.cs-reveal');
+  if ('IntersectionObserver' in window && csRevealEls.length) {
+    var csObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cs-reveal-visible');
+          csObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    csRevealEls.forEach(function (el) { csObserver.observe(el); });
+  } else {
+    csRevealEls.forEach(function (el) { el.classList.add('cs-reveal-visible'); });
+  }
 </script>
 </body>
 </html>
