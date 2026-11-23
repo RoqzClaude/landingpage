@@ -79,6 +79,14 @@
   .cs-pitch-list li { position: relative; padding-left: 28px; font-weight: 600; color: #fff; }
   .cs-pitch-list li::before { content: "✓"; position: absolute; left: 0; color: var(--cs-tan); font-weight: 700; }
 
+  .cs-price {
+    display: inline-flex; flex-direction: column; align-items: center;
+    margin: 28px auto 0; padding: 14px 32px; border-radius: var(--radius-lg);
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+  }
+  .cs-price-value { font-family: var(--font-display); font-weight: 700; font-size: 2rem; color: var(--cs-tan); line-height: 1; }
+  .cs-price-label { font-size: 0.82rem; color: rgba(255,255,255,0.75); margin-top: 6px; }
+
   .cs-form-card {
     max-width: 520px; margin: 0 auto; background: var(--white);
     border: 1px solid var(--border); border-radius: var(--radius-lg);
@@ -144,6 +152,10 @@
       <li>First access, ahead of public release</li>
       <li>Limited VIP tents available</li>
     </ul>
+    <div class="cs-price">
+      <span class="cs-price-value">$500 – $700</span>
+      <span class="cs-price-label">price range per VIP tent</span>
+    </div>
   </div>
 </section>
 
@@ -196,6 +208,14 @@
         <div class="contact-field">
           <label for="cs-group-size">How many people are you planning on going with? <span class="req">(required)</span></label>
           <input type="number" id="cs-group-size" name="group_size" min="1" required>
+        </div>
+        <div class="contact-field">
+          <label for="cs-first-time">Is this your first time using an inflatable tent? <span class="req">(required)</span></label>
+          <select id="cs-first-time" name="first_time_inflatable" required>
+            <option value="" disabled selected>Choose one</option>
+            <option value="Yes">Yes, first time</option>
+            <option value="No">No, I've used one before</option>
+          </select>
         </div>
 
         <button type="submit" class="btn btn-book btn-book-lg" style="width:100%; margin-top: 8px;">Join The Waitlist</button>
