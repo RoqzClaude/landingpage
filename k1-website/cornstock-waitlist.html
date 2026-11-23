@@ -87,6 +87,11 @@
   .cs-price-value { font-family: var(--font-display); font-weight: 700; font-size: 2rem; color: var(--cs-tan); line-height: 1; }
   .cs-price-label { font-size: 0.82rem; color: rgba(255,255,255,0.75); margin-top: 6px; }
 
+  .cs-about { position: relative; overflow: hidden; background: var(--white); }
+  .cs-about .wrap { position: relative; z-index: 1; }
+  .cs-about-decor { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+  .cs-about-decor span { position: absolute; opacity: 0.1; }
+
   .cs-form-card {
     max-width: 520px; margin: 0 auto; background: var(--white);
     border: 1px solid var(--border); border-radius: var(--radius-lg);
@@ -181,7 +186,14 @@
 </section>
 
 <!-- ABOUT / THE PARTNERSHIP -->
-<section class="section" style="background: var(--white);">
+<section class="section cs-about">
+  <div class="cs-about-decor" aria-hidden="true">
+    <span style="top:6%; left:4%; font-size:2.4rem; transform:rotate(-10deg);">🌽</span>
+    <span style="top:72%; left:7%; font-size:2rem; transform:rotate(12deg);">🌽</span>
+    <span style="top:12%; right:6%; font-size:2.2rem; transform:rotate(8deg);">🌽</span>
+    <span style="top:66%; right:9%; font-size:2.6rem; transform:rotate(-14deg);">🌽</span>
+    <span style="top:40%; left:50%; font-size:1.8rem; transform:translateX(-50%) rotate(6deg);">🌽</span>
+  </div>
   <div class="wrap">
     <p class="eyebrow center" style="display:block;">Who we are</p>
     <h2 class="center">K1 Outdoors × Cornstock</h2>
