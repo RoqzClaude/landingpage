@@ -137,6 +137,17 @@
 
   .cs-footer-trustpilot { color: var(--muted); text-decoration: underline; }
 
+  .cs-pay-breakdown { max-width: 360px; margin: 0 auto; }
+  .cs-pay-row {
+    display: flex; justify-content: space-between; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem;
+  }
+  .cs-pay-row span:first-child { color: var(--muted); }
+  .cs-pay-row span:last-child { font-weight: 600; }
+  .cs-pay-total { border-bottom: none; margin-top: 4px; padding-top: 14px; border-top: 2px solid var(--ink); }
+  .cs-pay-total span { font-family: var(--font-display); font-size: 1.1rem; color: var(--ink) !important; }
+  .cs-pay-btn { display: block; width: 100%; text-align: center; margin-top: 24px; text-decoration: none; }
+
   .cs-shout {
     background: var(--charcoal); padding: 56px 0; text-align: center; overflow: hidden;
   }
@@ -350,6 +361,25 @@
       </div>
 
       <p class="cs-disclaimer center">Festival tickets are sold separately by Cornstock. This is a K1 Outdoors glamping add-on only.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAY NOW -->
+<section class="section" style="background: var(--cream);">
+  <div class="wrap">
+    <div class="cs-form-card cs-reveal">
+      <p class="eyebrow center" style="display:block;">Ready to book?</p>
+      <h2 class="center" style="margin-bottom: 8px;">Reserve Your Spot Now</h2>
+      <p class="lede center" style="max-width: 440px; margin: 0 auto 24px;">Skip the waitlist and lock in your VIP tent today — pay securely online.</p>
+      <div class="cs-pay-breakdown">
+        <div class="cs-pay-row"><span>VIP Glamping Tent</span><span>$650.00</span></div>
+        <div class="cs-pay-row"><span>GST (5%)</span><span>$32.50</span></div>
+        <div class="cs-pay-row"><span>Damage Deposit (refundable)</span><span>$100.00</span></div>
+        <div class="cs-pay-row cs-pay-total"><span>Total Due Today</span><span>$782.50 CAD</span></div>
+      </div>
+      <a href="https://buy.stripe.com/9B67sL9sM8dFchX1pgasg00" target="_blank" rel="noopener" class="btn btn-book btn-book-lg cs-pay-btn">Pay $782.50 Now</a>
+      <p class="contact-form-note" style="text-align:center;">Secure checkout powered by Stripe. The damage deposit is refunded after a post-event inspection.</p>
     </div>
   </div>
 </section>
